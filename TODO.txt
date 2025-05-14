@@ -1,1 +1,2 @@
 vscode - pull config from a private repo
+Add neovim support
