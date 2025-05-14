@@ -1,0 +1,5 @@
+---
+- name: Configure vim
+  hosts: all
+  roles:
+    - vim

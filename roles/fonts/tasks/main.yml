@@ -1,0 +1,8 @@
+---
+  - name: "Install Overpass fonts package "
+    dnf:
+      name: "{{ item }}"
+      state: latest
+    become: true
+    loop: "{{ FONTS_LIST }} "
+

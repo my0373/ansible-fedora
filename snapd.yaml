@@ -1,0 +1,5 @@
+---
+- name: Configure SnapD
+  hosts: all
+  roles:
+    - snapd

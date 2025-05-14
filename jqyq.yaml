@@ -1,0 +1,5 @@
+---
+- name: Configure JQ & YQ
+  hosts: all
+  roles:
+    - jqyq

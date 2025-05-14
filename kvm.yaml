@@ -1,0 +1,5 @@
+---
+- name: Configure KVM
+  hosts: all
+  roles:
+    - kvm

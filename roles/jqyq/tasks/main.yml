@@ -1,0 +1,15 @@
+---
+# tasks file for jqyq
+#
+- name: Install jq
+  ansible.builtin.dnf:
+    name: jq
+    state: present
+  become: yes
+
+- name: Install yq
+  ansible.builtin.dnf:
+    name: yq
+    state: present
+  become: yes
+

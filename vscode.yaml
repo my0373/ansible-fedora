@@ -1,5 +1,5 @@
 ---
-- name: Configure Terminator
+- name: Configure vscode
   hosts: all
   roles:
     - vscode
