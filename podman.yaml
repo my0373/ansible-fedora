@@ -1,0 +1,5 @@
+---
+- name: Configure podman
+  hosts: all
+  roles:
+    - podman

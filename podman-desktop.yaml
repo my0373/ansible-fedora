@@ -1,0 +1,5 @@
+---
+- name: Configure podman-desktop
+  hosts: all
+  roles:
+    - podman-desktop

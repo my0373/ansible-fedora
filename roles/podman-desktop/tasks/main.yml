@@ -1,0 +1,20 @@
+#SPDX-License-Identifier: MIT-0
+---
+- name: Ensure flatpak is installed
+  ansible.builtin.dnf:
+    name: flatpak
+    state: present
+  become: yes
+
+- name: Add Flathub remote if not already present
+  ansible.builtin.command:
+    cmd: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  become: yes
+
+- name: Install Podman Desktop via Flatpak
+  ansible.builtin.command:
+    cmd: flatpak install -y flathub io.podman_desktop.PodmanDesktop
+  args:
+    creates: /var/lib/flatpak/app/io.podman_desktop.PodmanDesktop
+  become: yes
+
